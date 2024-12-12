@@ -77,3 +77,37 @@ struct ExpenseView: View {
 #Preview {
     ExpenseView()
 }
+
+
+//        .onChange(of: allExpenses, initial: true) { oldValue, newValue in
+       //            if newValue.count > oldValue.count || groupedExpenses.isEmpty {
+       //                createGroupedExpenses(newValue)
+       //            }
+       //        }
+//       .sheet(isPresented: $addExpense) {
+//           AddExpenseView()
+//       }
+//   }
+   
+   //    func createGroupedExpenses(_ expenses: [Expense]) {
+   //        Task.detached(priority: .high) {
+   //            let groupedDict = Dictionary(grouping: expenses) { expense in
+   //                let dateComponents = Calendar.current.dateComponents([.year, .month, .day], from: expense.date)
+   //                return dateComponents
+   //            }
+   //            let sortedDict = groupedDict.sorted {
+   //                let calendar = Calendar.current
+   //                let date1 = calendar.date(from: $0.key) ?? .init()
+   //                let date2 = calendar.date(from: $1.key) ?? .init()
+   //
+   //                return calendar.compare(date1, to: date2, toGranularity: .day) == .orderedDescending
+   //            }
+   //
+   //            await MainActor.run {
+   //                groupedExpenses = sortedDict.compactMap({ dict in
+   //                    let date = Calendar.current.date(from: dict.key) ?? .init()
+   //                    return .init(date: date, expenses: dict.value)
+   //                })
+   //            }
+   //        }
+   //    }
