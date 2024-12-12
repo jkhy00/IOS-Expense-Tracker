@@ -10,6 +10,7 @@ import SwiftUI
 struct CategoryView: View {
     var body: some View {
         NavigationStack {
+            
             List {
                 
             }
